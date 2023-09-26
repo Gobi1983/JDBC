@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
         userService.createUsersTable();
 
         userService.saveUser("Ivan", "Ivanov", (byte) 40);
@@ -19,12 +19,9 @@ public class Main {
         userService.saveUser("Alex", "Dikii", (byte) 35);
         userService.saveUser("Anna", "Semenova", (byte) 22);
 
-        List<User> users = userService.getAllUsers();
-        for (User user : users) {
-            System.out.println(user);
-        }
+//        userService.getAllUsers();
 //        userService.removeUserById(1);
-//        userService.cleanUsersTable();
+//       userService.cleanUsersTable();
 //        userService.dropUsersTable();
     }
 }
